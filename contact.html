@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        body {
+            background-image: url(codioful-formerly-gradienta-7brhZmwXn08-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+
+
+        #container {
+            max-width: 500px;
+            margin: 20px auto;
+            font-family: sans-serif;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #personaldetails {
+            display: flex;
+            flex-direction: column;
+            /* border: 1px solid black; */
+            margin: 0px 10px;
+        }
+
+        #bookingdetails {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0px;
+            border: 1px solid;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0px;
+        }
+
+        label {
+            margin-top: 20px;
+        }
+
+        #buttons {
+            display: flex;
+            flex-direction: row;
+        }
+
+        button {
+            padding: 10px;
+            margin: 0 auto;
+            border-radius: 10px;
+            width: 100px;
+            border: none;
+            box-shadow: 2px 2px 4px black;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        button:hover{
+            background-color: black;
+            box-shadow: none;
+            color: white;
+            /* border: 1px solid black; */
+        }
+        button:active{
+            background-color: gray;
+        }
+        #message{
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p id="message">Note: Field cannot be empty</p>
+        <form action="/contact" method="post">
+            <div id="personaldetails">
+                <h2>Personal Detials:</h2>
+                <label for="first_name">First name:</label>
+                <input type="text" name="first_name" id="first_name" placeholder="Enter your first name">
+                <hr>
+                <label for="last_name">Last name:</label>
+                <input type="text" name="last_name" id="last_name" placeholder="Enter your last name">
+                <label for="email_id">Email id:</label>
+                <input type="email" name="email" id="email_id" placeholder="Enter your email id">
+                <label for="phone_no">Phone no.:</label>
+                <input type="number" name="phone_no" id="phone_no" placeholder="Enter your phone number">
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" placeholder="Enter your Address">
+            </div>
+            <div id="bookingdetails">
+                <h2>Booking Detials:</h2>
+                <hr>
+                <label for="services">Select services:</label>
+
+                <select name="services" id="services">
+                    <option value="wedding">Wedding's</option>
+                    <option value="pre-wedding">Pre-wedding</option>
+                    <option value="post-wedding">Post-wedding</option>
+                    <option value="engagement">Engagement</option>
+                    <option value="melernity_shoot">Melernity Shoot</option>
+                    <option value="birthday_party_shoot">Birthday party shoot</option>
+                    <option value="out_shoot">Out shoot</option>
+                    <option value="corporate_shoot">Corporate shoot</option>
+                    <option value="others">Others</option>
+                </select>
+                <label for="duration">Duration</label>
+                <input type="number" name="duration" id="duration" placeholder="Enter Duration (No. of days)">
+                <label for="budget">Enter your budget</label>
+                <select name="budget" id="budget">
+                    <option value="less_than 20,000">Less than ₹20,000</option>
+                    <option value="20,000 to 30,000">₹20,000-30,000</option>
+                    <option value="30,000 to 40,000">₹30,000-40,000</option>
+                    <option value="40,000 to 50,000">₹40,000-50,000</option>
+                    <option value="50,000 t o1L">₹50,000-1L</option>
+                    <option value="1L to 1.5L">₹1 L - 1.5 L</option>
+                    <option value="1.5 L to 2L">₹1.5 L - 2 L</option>
+                    <option value="above 2L">Above ₹2 L</option>
+                </select>
+            </div>
+            <div id="buttons">
+                <button type="reset">reset</button>
+                <button type="submit" id="submitbtn">submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="contact.js" type="text/javascript"></script>
+</body>
+
+</html>
